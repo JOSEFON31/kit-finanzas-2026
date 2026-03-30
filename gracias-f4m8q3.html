@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracias por tu compra - Kit de Finanzas</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: linear-gradient(135deg, #1A1A2E 0%, #16213E 40%, #0F3460 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 580px;
+            text-align: center;
+        }
+
+        .check-circle {
+            width: 90px;
+            height: 90px;
+            background: rgba(72, 199, 142, 0.15);
+            border: 3px solid #48C78E;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-size: 2.5rem;
+            animation: scaleIn 0.5s ease-out;
+        }
+
+        @keyframes scaleIn {
+            from { transform: scale(0); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        h1 {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.65);
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+        }
+
+        .download-card {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .download-card h2 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .download-card p {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 1.5rem;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: #48C78E;
+            color: #fff;
+            font-size: 1.15rem;
+            font-weight: 700;
+            padding: 1rem 2.5rem;
+            border-radius: 14px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 25px rgba(72,199,142,0.4);
+        }
+
+        .download-btn:hover {
+            background: #3bb37a;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 35px rgba(72,199,142,0.5);
+        }
+
+        .file-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.2rem;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.4);
+        }
+
+        .steps {
+            text-align: left;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .steps h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #48C78E;
+        }
+
+        .step {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            align-items: flex-start;
+        }
+
+        .step:last-child { margin-bottom: 0; }
+
+        .step-num {
+            background: rgba(72,199,142,0.15);
+            color: #48C78E;
+            font-size: 0.8rem;
+            font-weight: 800;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .step p {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.5;
+        }
+
+        .footer-note {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.3);
+            margin-top: 2rem;
+            line-height: 1.6;
+        }
+
+        .footer-note a {
+            color: #48C78E;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="check-circle">&#10003;</div>
+
+    <h1>Pago exitoso. Gracias!</h1>
+    <p class="subtitle">Tu compra se proceso correctamente. Descarga tu Kit de Finanzas ahora mismo.</p>
+
+    <div class="download-card">
+        <h2>Kit de Finanzas Personales 2026</h2>
+        <p>Haz clic en el boton para descargar tu archivo ZIP</p>
+
+        <!-- AQUI VA EL LINK DE DESCARGA DEL ZIP -->
+        <a href="./assets/Kit_Finanzas_Personales_2026.zip" class="download-btn" download>
+            Descargar mi Kit (ZIP)
+        </a>
+
+        <div class="file-info">
+            <span>ZIP</span>
+            <span>7 plantillas Excel</span>
+            <span>+ Guia PDF Bonus</span>
+        </div>
+    </div>
+
+    <div class="steps">
+        <h3>Siguientes pasos:</h3>
+        <div class="step">
+            <span class="step-num">1</span>
+            <p>Descarga el ZIP y descomprime los archivos en tu computadora.</p>
+        </div>
+        <div class="step">
+            <span class="step-num">2</span>
+            <p>Abre el archivo <strong>"01_Presupuesto_Mensual.xlsx"</strong> en Excel o Google Sheets.</p>
+        </div>
+        <div class="step">
+            <span class="step-num">3</span>
+            <p>Llena tus datos en las celdas marcadas. Las formulas calculan todo automaticamente.</p>
+        </div>
+        <div class="step">
+            <span class="step-num">4</span>
+            <p>Lee la <strong>Guia PDF "Finanzas en 30 Dias"</strong> para seguir el plan completo paso a paso.</p>
+        </div>
+    </div>
+
+    <p class="footer-note">
+        Guarda esta pagina en tus favoritos por si necesitas descargar de nuevo.<br>
+        Si tienes algun problema, escribenos por mensaje directo.
+    </p>
+</div>
+
+</body>
+</html>

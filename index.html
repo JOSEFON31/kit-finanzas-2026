@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kit de Finanzas Personales 2026 - 7 Plantillas de Excel</title>
+    <meta name="description" content="7 plantillas de Excel profesionales para organizar tus finanzas personales. Presupuesto, gastos, ahorro, deudas y mas. Descarga inmediata.">
+    <meta property="og:title" content="Kit de Finanzas Personales 2026 - 7 Plantillas de Excel">
+    <meta property="og:description" content="Toma el control de tu dinero con 7 plantillas de Excel + guia PDF. Solo $99 MXN.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary: #1A1A2E;
+            --accent: #E94560;
+            --accent-hover: #d63a54;
+            --purple: #667EEA;
+            --green: #48C78E;
+            --dark: #0F0F1A;
+            --text: #333;
+            --text-light: #666;
+            --bg: #FAFBFF;
+            --card: #FFFFFF;
+            --border: #E8ECF4;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, #1A1A2E 0%, #16213E 40%, #0F3460 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 2rem 1rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(72,199,142,0.15) 0%, transparent 70%);
+            top: -100px; right: -100px;
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 300px; height: 300px;
+            background: radial-gradient(circle, rgba(102,126,234,0.12) 0%, transparent 70%);
+            bottom: -50px; left: -50px;
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            max-width: 720px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(72,199,142,0.15);
+            color: var(--green);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(72,199,142,0.3);
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5.5vw, 3.2rem);
+            font-weight: 900;
+            color: #fff;
+            line-height: 1.15;
+            margin-bottom: 1.2rem;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--green), var(--purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.7);
+            max-width: 540px;
+            margin: 0 auto 2rem;
+            line-height: 1.7;
+        }
+
+        .hero-price {
+            margin-bottom: 2rem;
+        }
+
+        .price-old {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.4);
+            text-decoration: line-through;
+            margin-right: 0.5rem;
+        }
+
+        .price-new {
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: #fff;
+        }
+
+        .price-new sup {
+            font-size: 1.2rem;
+            top: -1rem;
+        }
+
+        .price-tag {
+            display: block;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+            margin-top: 0.3rem;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            padding: 1rem 2.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 25px rgba(233,69,96,0.4);
+            letter-spacing: 0.3px;
+        }
+
+        .cta-btn:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 35px rgba(233,69,96,0.5);
+        }
+
+        .hero-guarantee {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1.2rem;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+            flex-wrap: wrap;
+        }
+
+        /* URGENCY BAR */
+        .urgency-bar {
+            background: var(--accent);
+            padding: 0.8rem 1rem;
+            text-align: center;
+        }
+        .urgency-bar p {
+            color: #fff;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        /* SOCIAL PROOF BAR */
+        .social-proof {
+            background: var(--primary);
+            padding: 1.2rem 1rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .social-proof p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .social-proof strong {
+            color: var(--green);
+        }
+
+        /* SECTIONS */
+        section { padding: 5rem 1.5rem; }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            display: inline-block;
+            color: var(--accent);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0.8rem;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 4vw, 2.4rem);
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            max-width: 600px;
+            line-height: 1.7;
+            margin-bottom: 3rem;
+        }
+
+        /* WHAT YOU GET */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .feature-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+            border-color: rgba(72,199,142,0.3);
+        }
+
+        .feature-icon {
+            width: 48px; height: 48px;
+            background: linear-gradient(135deg, rgba(72,199,142,0.1), rgba(102,126,234,0.1));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* TEMPLATES LIST */
+        .templates-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        .template-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.2rem 1.5rem;
+            transition: all 0.2s ease;
+        }
+
+        .template-item:hover {
+            border-color: var(--green);
+            background: #F0FFF4;
+        }
+
+        .template-num {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--green);
+            opacity: 0.7;
+            min-width: 32px;
+        }
+
+        .template-info h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .template-info span {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        /* WHO IS THIS FOR */
+        .for-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .for-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .for-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .for-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .for-card p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* TESTIMONIALS */
+        .testimonials-section {
+            background: linear-gradient(135deg, #1A1A2E, #16213E);
+        }
+
+        .testimonials-section .section-label { color: var(--green); }
+        .testimonials-section .section-title { color: #fff; }
+        .testimonials-section .section-subtitle { color: rgba(255,255,255,0.6); }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .testimonial-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 2rem;
+        }
+
+        .stars { color: #FFC107; font-size: 1rem; margin-bottom: 1rem; }
+
+        .testimonial-card p {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.7;
+            margin-bottom: 1.2rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+            font-weight: 600;
+        }
+
+        /* PRICING CTA */
+        .pricing-section {
+            background: var(--bg);
+            text-align: center;
+        }
+
+        .pricing-box {
+            max-width: 480px;
+            margin: 0 auto;
+            background: var(--card);
+            border: 2px solid var(--green);
+            border-radius: 24px;
+            padding: 3rem 2rem;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(72,199,142,0.12);
+        }
+
+        .pricing-popular {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.4rem 1.5rem;
+            border-radius: 50px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .pricing-box h3 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-box .price-section {
+            margin: 1.5rem 0;
+        }
+
+        .pricing-box .price-old {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .pricing-box .price-new {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--primary);
+        }
+
+        .pricing-features {
+            list-style: none;
+            text-align: left;
+            margin: 2rem 0;
+        }
+
+        .pricing-features li {
+            padding: 0.6rem 0;
+            font-size: 0.95rem;
+            color: var(--text);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+
+        .pricing-features li:last-child { border: none; }
+
+        .check {
+            color: var(--green);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .pricing-box .cta-btn {
+            width: 100%;
+            text-align: center;
+            padding: 1.1rem;
+            font-size: 1.15rem;
+            margin-top: 0.5rem;
+        }
+
+        .pricing-note {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-top: 1rem;
+        }
+
+        /* FAQ */
+        .faq-list {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 1.5rem 0;
+        }
+
+        .faq-item summary {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary);
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-item summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--accent);
+            font-weight: 300;
+            transition: transform 0.2s;
+        }
+
+        .faq-item[open] summary::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-item p {
+            margin-top: 0.8rem;
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* FINAL CTA */
+        .final-cta {
+            background: linear-gradient(135deg, #1A1A2E 0%, #0F3460 100%);
+            text-align: center;
+            padding: 5rem 1.5rem;
+        }
+
+        .final-cta h2 {
+            font-size: clamp(1.6rem, 4vw, 2.2rem);
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .final-cta p {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .final-cta .cta-btn {
+            font-size: 1.15rem;
+            padding: 1.1rem 3rem;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--dark);
+            text-align: center;
+            padding: 2rem 1rem;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.3);
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-content > * {
+            animation: fadeUp 0.6s ease-out both;
+        }
+
+        .hero-content > *:nth-child(1) { animation-delay: 0.1s; }
+        .hero-content > *:nth-child(2) { animation-delay: 0.2s; }
+        .hero-content > *:nth-child(3) { animation-delay: 0.3s; }
+        .hero-content > *:nth-child(4) { animation-delay: 0.4s; }
+        .hero-content > *:nth-child(5) { animation-delay: 0.5s; }
+        .hero-content > *:nth-child(6) { animation-delay: 0.6s; }
+
+        /* RESPONSIVE */
+        @media (max-width: 640px) {
+            section { padding: 3.5rem 1rem; }
+            .pricing-box { padding: 2rem 1.5rem; }
+            .feature-card { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- URGENCY BAR -->
+<div class="urgency-bar">
+    <p>OFERTA DE ABRIL - Precio especial $99 MXN (valor real $499) - Solo por tiempo limitado</p>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="badge">Kit Completo 2026</div>
+        <h1>7 Plantillas de Excel para<br><span>Ordenar tus Finanzas Personales</span></h1>
+        <p>Presupuesto, gastos, ahorro, deudas y mas. Descarga, llena tus datos y toma el control de tu dinero hoy mismo.</p>
+        <div class="hero-price">
+            <span class="price-old">$499 MXN</span>
+            <span class="price-new"><sup>$</sup>99<sup>MXN</sup></span>
+            <span class="price-tag">Precio de lanzamiento - Ahorra 80%</span>
+        </div>
+        <!-- AQUI VA TU LINK DE MERCADO PAGO -->
+        <a href="https://mpago.li/XXXXX" class="cta-btn" id="cta-hero">Quiero mi Kit de Finanzas</a>
+        <div class="hero-guarantee">
+            <span>&#9679;</span> Descarga inmediata &nbsp; <span>&#9679;</span> Excel + PDF &nbsp; <span>&#9679;</span> Pago seguro
+        </div>
+    </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<div class="social-proof">
+    <p>Mas de <strong>500 personas</strong> ya usan estas plantillas para controlar su dinero cada mes</p>
+</div>
+
+<!-- QUE OBTIENES -->
+<section id="contenido">
+    <div class="container">
+        <span class="section-label">Lo que obtienes</span>
+        <h2 class="section-title">Todo lo que necesitas para tomar el control de tu dinero</h2>
+        <p class="section-subtitle">No es una guia teorica. Son 7 plantillas de Excel con formulas listas para que solo llenes tus datos y veas resultados.</p>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">&#128202;</div>
+                <h3>7 Plantillas de Excel</h3>
+                <p>Profesionales, con formulas automaticas. Solo llena tus datos y Excel hace los calculos por ti.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#9889;</div>
+                <h3>Formulas Automaticas</h3>
+                <p>Todo se calcula solo: diferencias, porcentajes, proyecciones y alertas. Cero errores manuales.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#128200;</div>
+                <h3>Graficas Incluidas</h3>
+                <p>Barras, pastel, lineas. Ve tu progreso financiero de un vistazo con graficas profesionales.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#127919;</div>
+                <h3>Metodo 50/30/20</h3>
+                <p>La regla mas efectiva para distribuir tu dinero. La plantilla calcula todo automaticamente.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#128176;</div>
+                <h3>Control de Deudas</h3>
+                <p>Metodo Bola de Nieve: paga tus deudas de forma inteligente y sal de ellas mas rapido.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#127873;</div>
+                <h3>BONUS: Guia PDF</h3>
+                <p>"Como Ordenar tus Finanzas en 30 Dias" - Plan paso a paso para usar cada plantilla.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 7 PLANTILLAS -->
+<section style="background: #F0FFF4;">
+    <div class="container">
+        <span class="section-label">7 Plantillas</span>
+        <h2 class="section-title">Un sistema completo para tus finanzas</h2>
+        <p class="section-subtitle">Cada plantilla resuelve un problema financiero especifico. Juntas, son tu sistema completo.</p>
+
+        <div class="templates-list">
+            <div class="template-item">
+                <span class="template-num">01</span>
+                <div class="template-info">
+                    <h4>Presupuesto Mensual</h4>
+                    <span>Categorias para gastos mexicanos (CFE, agua, super...)</span>
+                </div>
+            </div>
+            <div class="template-item">
+                <span class="template-num">02</span>
+                <div class="template-info">
+                    <h4>Control de Gastos Diarios</h4>
+                    <span>Registra cada peso que gastas, por semana</span>
+                </div>
+            </div>
+            <div class="template-item">
+                <span class="template-num">03</span>
+                <div class="template-info">
+                    <h4>Metodo 50/30/20</h4>
+                    <span>Distribuye tu ingreso inteligentemente</span>
+                </div>
+            </div>
+            <div class="template-item">
+                <span class="template-num">04</span>
+                <div class="template-info">
+                    <h4>Plan de Ahorro</h4>
+                    <span>Metas con fecha limite y seguimiento mensual</span>
+                </div>
+            </div>
+            <div class="template-item">
+                <span class="template-num">05</span>
+                <div class="template-info">
+                    <h4>Control de Deudas</h4>
+                    <span>Metodo Bola de Nieve para salir de deudas</span>
+                </div>
+            </div>
+            <div class="template-item">
+                <span class="template-num">06</span>
+                <div class="template-info">
+                    <h4>Dashboard Financiero Anual</h4>
+                    <span>Resumen de 12 meses con graficas de tendencia</span>
+                </div>
+            </div>
+            <div class="template-item">
+                <span class="template-num">07</span>
+                <div class="template-info">
+                    <h4>Calculadora de Metas</h4>
+                    <span>3 escenarios: conservador, moderado, agresivo</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PARA QUIEN -->
+<section>
+    <div class="container">
+        <span class="section-label">Para quien es</span>
+        <h2 class="section-title">Este kit es para ti si...</h2>
+        <p class="section-subtitle">No necesitas saber de finanzas ni de Excel. Solo necesitas querer ordenar tu dinero.</p>
+
+        <div class="for-grid">
+            <div class="for-card">
+                <div class="for-icon">&#128176;</div>
+                <h3>No sabes a donde va tu dinero</h3>
+                <p>Llegas a quincena y no entiendes que paso. Estas plantillas te muestran exactamente a donde va cada peso.</p>
+            </div>
+            <div class="for-card">
+                <div class="for-icon">&#127968;</div>
+                <h3>Quieres ahorrar para algo grande</h3>
+                <p>Casa, auto, vacaciones, fondo de emergencia. La plantilla te dice cuanto ahorrar cada mes para lograrlo.</p>
+            </div>
+            <div class="for-card">
+                <div class="for-icon">&#128179;</div>
+                <h3>Tienes deudas que te agobian</h3>
+                <p>El metodo Bola de Nieve te da un plan claro para salir de deudas paso a paso, empezando por la mas pequena.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="testimonials-section">
+    <div class="container">
+        <span class="section-label">Resultados reales</span>
+        <h2 class="section-title">Lo que dicen quienes ya lo usan</h2>
+        <p class="section-subtitle">Personas como tu que tomaron el control de su dinero.</p>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p>"Antes gastaba sin control. En el primer mes con las plantillas ahorre $2,800 pesos sin sentir que me estaba privando de nada."</p>
+                <span class="testimonial-author">- Laura M., empleada, CDMX</span>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p>"La plantilla de deudas me ayudo a pagar mi tarjeta departamental en 4 meses. Antes solo pagaba el minimo y nunca bajaba."</p>
+                <span class="testimonial-author">- Roberto S., comerciante, Monterrey</span>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p>"Super facil de usar. Solo llenas los numeros y Excel hace todo. La guia PDF te explica paso a paso. Lo recomiendo al 100%."</p>
+                <span class="testimonial-author">- Diana P., freelancer, Guadalajara</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-section" id="comprar">
+    <div class="container">
+        <span class="section-label">Oferta de abril</span>
+        <h2 class="section-title">Invierte en tu tranquilidad financiera</h2>
+        <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Por menos de lo que gastas en un cafe a la semana, organizas tus finanzas de por vida.</p>
+
+        <div class="pricing-box">
+            <div class="pricing-popular">80% de descuento</div>
+            <h3>Kit de Finanzas Personales 2026</h3>
+            <div class="price-section">
+                <span class="price-old">$499 MXN</span><br>
+                <span class="price-new"><sup>$</sup>99<sup>MXN</sup></span>
+            </div>
+
+            <ul class="pricing-features">
+                <li><span class="check">&#10003;</span> 7 plantillas de Excel profesionales</li>
+                <li><span class="check">&#10003;</span> Formulas automaticas (solo llena tus datos)</li>
+                <li><span class="check">&#10003;</span> Graficas de barras, pastel y lineas</li>
+                <li><span class="check">&#10003;</span> BONUS: Guia PDF "Finanzas en 30 Dias"</li>
+                <li><span class="check">&#10003;</span> Compatible con Excel y Google Sheets</li>
+                <li><span class="check">&#10003;</span> Descarga inmediata (ZIP)</li>
+                <li><span class="check">&#10003;</span> Acceso de por vida - usalo cada mes</li>
+            </ul>
+
+            <!-- AQUI VA TU LINK DE MERCADO PAGO -->
+            <a href="https://mpago.li/XXXXX" class="cta-btn" id="cta-pricing">Comprar Ahora - $99 MXN</a>
+            <p class="pricing-note">Pago seguro con Mercado Pago. Descarga inmediata despues del pago.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section>
+    <div class="container">
+        <span class="section-label">Preguntas frecuentes</span>
+        <h2 class="section-title">Resolvemos tus dudas</h2>
+        <p class="section-subtitle">Si tienes otra pregunta, escribenos por mensaje directo.</p>
+
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary>Como recibo las plantillas?</summary>
+                <p>Inmediatamente despues de tu pago en Mercado Pago, llegas a una pagina donde puedes descargar un archivo ZIP con las 7 plantillas de Excel y la guia PDF.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Funcionan en Google Sheets?</summary>
+                <p>Si. Las plantillas son archivos .xlsx que puedes abrir tanto en Excel como en Google Sheets. Las formulas y formatos funcionan en ambos.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Necesito saber usar Excel?</summary>
+                <p>No. Las plantillas ya tienen todas las formulas configuradas. Tu solo llenas los datos en las celdas marcadas y todo se calcula automaticamente.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Que version de Excel necesito?</summary>
+                <p>Cualquier version de Excel 2010 en adelante, o Google Sheets (gratis). Tambien funciona en LibreOffice Calc.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Puedo usar las plantillas cada mes?</summary>
+                <p>Si. Las plantillas son reutilizables. Puedes hacer una copia cada mes o simplemente actualizar los datos. Son tuyas de por vida.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Puedo pedir factura?</summary>
+                <p>Si, escribenos despues de tu compra con tus datos fiscales y te generamos tu factura (CFDI).</p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+    <h2>Deja de preguntarte a donde se va tu dinero.<br>Toma el control hoy.</h2>
+    <p>7 plantillas. 1 guia. Todo lo que necesitas para ordenar tus finanzas en menos de una hora.</p>
+    <!-- AQUI VA TU LINK DE MERCADO PAGO -->
+    <a href="https://mpago.li/XXXXX" class="cta-btn" id="cta-final">Quiero mi Kit de Finanzas - $99 MXN</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2026 - Kit de Finanzas Personales. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
